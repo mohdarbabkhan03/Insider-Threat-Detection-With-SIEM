@@ -21,12 +21,11 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 
 # Setup and Deployment
-1) Deploy the provided OVAs in VMware or VirtualBox.
-2) Configure the VMs into a private NAT network.
-3) Install required agents and tools on the Ubuntu machine.
-4) Configure integrations (Suricata, Auditd, VirusTotal, Slack).
-5) Deploy custom Active Response scripts and detection monitors.
-6) Detailed setup instructions can be found in the Documentation folder.
+To deploy the VMs in a virtual environment, the user needs to:
+1) Click 'Open a Virtual Machine' once VMware Workstation Pro is downloaded, and import the respective OVF files. 
+2) Make sure to set the 'storage path of the new virtual machine' as the folder which contains the respective OVF file. eg: (/Downloads/Virtual Machines/Kali)
+3) Make sure each VM is within the same NAT network
+4) Update IP addresses within required config files like (ossec-agent.conf, suricata.yaml)
 
 # License
 This project is strictly for academic and educational purposes only.
