@@ -22,10 +22,11 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 # Setup and Deployment
 To deploy the VMs in a virtual environment, the user needs to:
-1) Click 'Open a Virtual Machine' once VMware Workstation Pro is downloaded, and import the respective OVF files. 
-2) Make sure to set the 'storage path of the new virtual machine' as the folder which contains the respective OVF file. eg: (/Downloads/Virtual Machines/Kali)
-3) Make sure each VM is within the same NAT network
-4) Update IP addresses within required config files like (ossec-agent.conf, suricata.yaml)
+1) Unzip VMs from VMs.zip
+2) Click 'Open a Virtual Machine' once VMware Workstation Pro is downloaded, and import the respective OVF files. 
+3) Make sure to set the 'storage path of the new virtual machine' as the folder which contains the respective OVF file. eg: (/Downloads/Virtual Machines/Kali)
+4) Make sure each VM is within the same NAT network
+5) Update IP addresses within required config files like (ossec-agent.conf, suricata.yaml)
 
 # License
 This project is strictly for academic and educational purposes only.
