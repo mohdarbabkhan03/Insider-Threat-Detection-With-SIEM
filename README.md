@@ -9,15 +9,15 @@ I used the open-source SIEM platform Wazuh as the foundation, integrating it wit
 To validate the system, I simulated a variety of insider threat scenarios within a virtualized lab environment. The testing focused on evaluating detection accuracy, response effectiveness, and the ability to automate threat mitigation.
 
 # Repository Structure
-+--------------------+-----------------------------------------------------------+
-| Folder/File        | Description                                               |
-+--------------------+-----------------------------------------------------------+
-| /OVAs/             | Pre-configured Virtual Machine images (Ubuntu, Kali, Wazuh)|
-| /Scripts/          | Custom Active Response scripts (e.g., remove-threat.sh)    |
-| /Configurations/   | Config files for Wazuh agent, Suricata, Auditd, Slack       |
-| /Documentation/    | Final project report, architecture diagrams, use case docs |
-| /Test Files/       | Sample files used for testing (e.g., EICAR file, datasets)  |
-+--------------------+-----------------------------------------------------------+
+
+| Folder/File        | Description                                                 |
+|--------------------|-------------------------------------------------------------|
+| `/OVAs/`           | Pre-configured Virtual Machine images (Ubuntu, Kali, Wazuh) |
+| `/Scripts/`        | Custom Active Response scripts (e.g., `remove-threat.sh`)    |
+| `/Configurations/` | Config files for Wazuh agent, Suricata, Auditd, Slack        |
+| `/Documentation/`  | Final project report, architecture diagrams, use case docs  |
+| `/Test Files/`     | Sample files used for testing (e.g., EICAR file, datasets)   |
+
 
 # Setup and Deployment
 1) Deploy the provided OVAs in VMware or VirtualBox.
