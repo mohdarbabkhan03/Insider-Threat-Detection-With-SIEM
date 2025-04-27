@@ -12,11 +12,12 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 | Folder/File        | Description                                                 |
 |--------------------|-------------------------------------------------------------|
-| `/OVAs/`           | Pre-configured Virtual Machine images (Ubuntu, Kali, Wazuh) |
-| `/Scripts/`        | Custom Active Response scripts (e.g., `remove-threat.sh`)    |
 | `/Configurations/` | Config files for Wazuh agent, Suricata, Auditd, Slack        |
 | `/Documentation/`  | Final project report, architecture diagrams, use case docs  |
+| `/OVAs/`           | Pre-configured Virtual Machine images (Ubuntu, Kali, Wazuh) |
+| `/Scripts/`        | Custom Active Response scripts (e.g., `remove-threat.sh`)    |
 | `/Test Files/`     | Sample files used for testing (e.g., EICAR file, datasets)   |
+
 
 
 # Setup and Deployment
