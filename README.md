@@ -21,7 +21,7 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 # Setup and Deployment
 To deploy the VMs in a virtual environment, the user needs to:
-1) Download VMs from the following link @ https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBuBrEUdb9EoufMTYGsH1YnQ?e=Ekwi4d (Make sure to use DMU Email to access)
+1) Download VMs from the following link @ https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG (Make sure to use DMU Email to access)
 2) Click 'Open a Virtual Machine' once VMware Workstation Pro is downloaded, and import the respective OVF files. 
 3) Make sure to set the 'storage path of the new virtual machine' as the folder which contains the respective OVF file. eg: (/Downloads/Virtual Machines/Kali)
 4) Make sure each VM is within the same NAT network
