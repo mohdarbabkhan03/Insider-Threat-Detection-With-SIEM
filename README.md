@@ -87,7 +87,7 @@ sudo systemctl restart wazuh-agent
 # VM Credentials
 
 | VM/Account        | Username            | Password                                     |
-|--------------------|-------------------------------------------------------------|
+|--------------------|--------------------|----------------------------------------|
 | `Ubuntu` | ubuntu        | ubuntu |
 | `Kali`  | kali  | kali |
 | `Wazuh Server`        | wazuh-user | wazuh |
