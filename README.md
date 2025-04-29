@@ -41,7 +41,7 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 ## 4. Minimal Configuration Required
 All necessary tools (Wazuh agent, Suricata, Auditd) and integrations (VirusTotal API, Slack) are already pre-installed and configured.  
-You only need to update IP-specific settings based on your network:
+Only need to update IP-specific settings based on your network:
 
 ### 4.1 Update Suricata's HOME_NET
 - On the Ubuntu machine, open the Suricata configuration file:
@@ -49,7 +49,7 @@ You only need to update IP-specific settings based on your network:
   sudo nano /etc/suricata/suricata.yaml
   ```
 - Locate the `vars` section.
-- Find the `HOME_NET` variable and update it to match your private NAT network range (example: `192.168.0.0/24`).
+- Find the `HOME_NET` variable and update it to match the new private NAT network range (example: `192.168.0.0/24`).
 - Save and exit the file.
 
 ### 4.2 Update Wazuh Agent's Server IP Address
@@ -58,7 +58,7 @@ You only need to update IP-specific settings based on your network:
   sudo nano /var/ossec/etc/ossec.conf
   ```
 - Find the `<client>` section.
-- Update the `<address>` field with the correct IP address of your Wazuh Server.
+- Update the `<address>` field with the correct IP address of the imported Wazuh Server.
 - Save and exit the file.
 
 ### 4.3 Restart Required Services
@@ -71,13 +71,13 @@ sudo systemctl restart wazuh-agent
 ---
 
 ## 5. Access Wazuh Dashboard
-- Open your web browser and go to:
+- Open the web browser and go to:
   ```
   https://<Wazuh_Server_IP>
   ```
 - Log in using the provided credentials in the VM Description (or look at the `VM Credentials` section).
 
-✅ After these steps, your system is ready for use!
+✅ After these steps, the system is ready for use
 
 ---
 
