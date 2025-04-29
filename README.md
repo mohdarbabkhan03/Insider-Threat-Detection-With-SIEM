@@ -28,7 +28,7 @@ To validate the system, I simulated a variety of insider threat scenarios within
   - Wazuh Server
   - Ubuntu Victim Machine
   - Kali Linux Attacker Machine
-- VMs available to download from the [OneDrive Link](https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG) 🚀 (Only accessible through a DMU email account)
+- VMs available to download from the [OneDrive Link](https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG) 🔗 (Only accessible through a DMU email account)
 
 ## 2. Import Virtual Machines
 - Open VMware Workstation or VirtualBox.
