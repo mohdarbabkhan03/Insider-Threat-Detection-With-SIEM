@@ -1,3 +1,5 @@
+## Author: Mohammed Khan - P2770825
+
 # Insider-Threat-Detection-Using-SIEM
 This is my Final Year BSc Cyber Security (Hons) Project
 
@@ -26,17 +28,16 @@ To validate the system, I simulated a variety of insider threat scenarios within
   - Wazuh Server
   - Ubuntu Victim Machine
   - Kali Linux Attacker Machine
-- VMs available to download from the [OneDrive Link](https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG) 🚀
+- VMs available to download from the [OneDrive Link](https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG) 🚀 (Only accessible through a DMU email account)
 
 ## 2. Import Virtual Machines
 - Open VMware Workstation or VirtualBox.
-- If in VMware click the 'Open a Virtual Machine' button, select the OVF file to import, and set the 'Storage path for the new virtual machine' as the same file the respective OVF is present within (eg: Downloads/Virtual Machines/Kali)
+- If in VMware click the `Open a Virtual Machine` button, select the OVF file to import, and set the `Storage path for the new virtual machine` as the same file the respective OVF is present within (eg: Downloads/Virtual Machines/Kali)
 - Place all VMs under the same NAT/private network.
 
 ## 3. Configure Networking
 - Ensure all machines are connected to the same NAT or private network.
 - Verify connectivity by using ICMP pings between Ubuntu, Kali, and the Wazuh Server.
-- Confirm that Ubuntu and Kali machines can reach the Wazuh Server using their assigned IP addresses.
 
 ## 4. Minimal Configuration Required
 All necessary tools (Wazuh agent, Suricata, Auditd) and integrations (VirusTotal API, Slack) are already pre-installed and configured.  
@@ -48,7 +49,7 @@ You only need to update IP-specific settings based on your network:
   sudo nano /etc/suricata/suricata.yaml
   ```
 - Locate the `vars` section.
-- Find the `HOME_NET` variable and update it to match your private NAT network range (example: `192.168.229.0/24`).
+- Find the `HOME_NET` variable and update it to match your private NAT network range (example: `192.168.0.0/24`).
 - Save and exit the file.
 
 ### 4.2 Update Wazuh Agent's Server IP Address
@@ -74,7 +75,7 @@ sudo systemctl restart wazuh-agent
   ```
   https://<Wazuh_Server_IP>
   ```
-- Log in using the provided credentials (or default credentials if unchanged).
+- Log in using the provided credentials in the VM Description (or look at the `VM Credentials` section).
 
 ✅ After these steps, your system is ready for use!
 
@@ -83,6 +84,14 @@ sudo systemctl restart wazuh-agent
 > **Note:**  
 > If network settings change later, update both Suricata’s `HOME_NET` and the Wazuh agent’s `<address>` field to match the new configuration.
 
+# VM Credentials
+
+| VM/Account        | Username            | Password                                     |
+|--------------------|-------------------------------------------------------------|
+| `Ubuntu` | ubuntu        | ubuntu |
+| `Kali`  | kali  | kali |
+| `Wazuh Server`        | wazuh-user | wazuh |
+| `Wazuh Web Page`     | admin   | admin |
 
 # License
 This project is strictly for academic and educational purposes only.
