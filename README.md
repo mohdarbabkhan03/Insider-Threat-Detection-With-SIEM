@@ -21,16 +21,16 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 # Setup and Deployment
 ## 1. Requirements
-- VMware Workstation or VirtualBox
+- VMware Workstation (Preferable; Available in OneDrive) or VirtualBox
 - Pre-configured OVF files for:
   - Wazuh Server
   - Ubuntu Victim Machine
   - Kali Linux Attacker Machine
-- 8 GB RAM (minimum), 100 GB disk space
+- VMs available to download from the [OneDrive Link](https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG) 🚀
 
 ## 2. Import Virtual Machines
 - Open VMware Workstation or VirtualBox.
-- Import the provided OVF files.
+- If in VMware click the 'Open a Virtual Machine' button, select the OVF file to import, and set the 'Storage path for the new virtual machine' as the same file the respective OVF is present within (eg: Downloads/Virtual Machines/Kali)
 - Place all VMs under the same NAT/private network.
 
 ## 3. Configure Networking
