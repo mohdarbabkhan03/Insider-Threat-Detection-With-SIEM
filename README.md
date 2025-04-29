@@ -20,12 +20,69 @@ To validate the system, I simulated a variety of insider threat scenarios within
 
 
 # Setup and Deployment
-To deploy the VMs in a virtual environment, the user needs to:
-1) Download VMs from the following link @ https://demontfortuniversity-my.sharepoint.com/:f:/g/personal/p2770825_my365_dmu_ac_uk/EnriMTRj0xVKmDrseTGggsIBmfGkm3_rPf62gnw6kMfBbw?e=kq68qG (Make sure to use DMU Email to access)
-2) Click 'Open a Virtual Machine' once VMware Workstation Pro is downloaded, and import the respective OVF files. 
-3) Make sure to set the 'storage path of the new virtual machine' as the folder which contains the respective OVF file. eg: (/Downloads/Virtual Machines/Kali)
-4) Make sure each VM is within the same NAT network
-5) Update IP addresses within required config files like (ossec-agent.conf, suricata.yaml)
+## 1. Requirements
+- VMware Workstation or VirtualBox
+- Pre-configured OVF files for:
+  - Wazuh Server
+  - Ubuntu Victim Machine
+  - Kali Linux Attacker Machine
+- 8 GB RAM (minimum), 100 GB disk space
+
+## 2. Import Virtual Machines
+- Open VMware Workstation or VirtualBox.
+- Import the provided OVF files.
+- Place all VMs under the same NAT/private network.
+
+## 3. Configure Networking
+- Ensure all machines are connected to the same NAT or private network.
+- Verify connectivity by using ICMP pings between Ubuntu, Kali, and the Wazuh Server.
+- Confirm that Ubuntu and Kali machines can reach the Wazuh Server using their assigned IP addresses.
+
+## 4. Minimal Configuration Required
+All necessary tools (Wazuh agent, Suricata, Auditd) and integrations (VirusTotal API, Slack) are already pre-installed and configured.  
+You only need to update IP-specific settings based on your network:
+
+### 4.1 Update Suricata's HOME_NET
+- On the Ubuntu machine, open the Suricata configuration file:
+  ```bash
+  sudo nano /etc/suricata/suricata.yaml
+  ```
+- Locate the `vars` section.
+- Find the `HOME_NET` variable and update it to match your private NAT network range (example: `192.168.229.0/24`).
+- Save and exit the file.
+
+### 4.2 Update Wazuh Agent's Server IP Address
+- On the Ubuntu machine, open the Wazuh agent configuration file:
+  ```bash
+  sudo nano /var/ossec/etc/ossec.conf
+  ```
+- Find the `<client>` section.
+- Update the `<address>` field with the correct IP address of your Wazuh Server.
+- Save and exit the file.
+
+### 4.3 Restart Required Services
+After making the above configuration changes, restart the necessary services:
+```bash
+sudo systemctl restart suricata
+sudo systemctl restart wazuh-agent
+```
+
+---
+
+## 5. Access Wazuh Dashboard
+- Open your web browser and go to:
+  ```
+  https://<Wazuh_Server_IP>
+  ```
+- Log in using the provided credentials (or default credentials if unchanged).
+
+✅ After these steps, your system is ready for use!
+
+---
+
+> **Note:**  
+> If network settings change later, update both Suricata’s `HOME_NET` and the Wazuh agent’s `<address>` field to match the new configuration.
+
 
 # License
 This project is strictly for academic and educational purposes only.
