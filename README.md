@@ -1,6 +1,6 @@
 ## Author: Mohammed Khan - P2770825
 
-# Insider-Threat-Detection-Using-SIEM
+# Insider-Threat-Detection-With-SIEM
 This is my Final Year BSc Cyber Security (Hons) Project
 
 In this project, I designed and implemented a centralized framework for detecting insider threats using a SIEM (Security Information and Event Management) system.
