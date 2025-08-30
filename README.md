@@ -1,4 +1,4 @@
-## Author: Mohammed Khan - P2770825
+## Author: Mohammed Khan
 
 # Insider-Threat-Detection-With-SIEM
 This is my Final Year BSc Cyber Security (Hons) Project
